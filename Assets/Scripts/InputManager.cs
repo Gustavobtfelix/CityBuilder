@@ -53,13 +53,13 @@ public class InputManager : MonoBehaviour
     }
 
     private void CheckClickUpEvent(){
-        if(Input.GetMouseButtonUp(0) && EventSystem.current.IsPointerOverGameObject() == false){ // 0 == left mouse button | this verify if the pointer is not over the Canvas
+        if(Input.GetMouseButtonUp(0) && EventSystem.current.IsPointerOverGameObject() == false){ // this verify if the pointer is not over the Canvas
             OnMouseUp?.Invoke();
         }
     }
     
     private void CheckClickDownEvent(){
-        if(Input.GetMouseButtonDown(0) && EventSystem.current.IsPointerOverGameObject() == false){ // 0 == left mouse button | this verify if the pointer is not over the Canvas
+        if(Input.GetMouseButtonDown(0) && EventSystem.current.IsPointerOverGameObject() == false){ // this verify if the pointer is not over the Canvas
             var position = RaycastGround();
             if (position != null)
                 OnMouseClick?.Invoke(position.Value);
