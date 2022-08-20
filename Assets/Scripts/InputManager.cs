@@ -33,7 +33,7 @@ public class InputManager : MonoBehaviour
     private Vector3Int? RaycastGround(){ // ? means it can return null
         RaycastHit hit;
         Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition); // will create a ray from the camera towards the point you click with the mouse on the scene
-        if(Physics.Raycast(ray, out hit, Mathf.Infinity, groundMask)){
+        if(Physics.Raycast(ray, out hit, Mathf.Infinity, groundMask)){ //use ray: if hit exist, has lenght infinite and is hitting groundMask
             Vector3Int positionInt = Vector3Int.RoundToInt(hit.point);
             return positionInt;
         }//else

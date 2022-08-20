@@ -17,7 +17,7 @@ namespace SVS
         {
             gameCamera = GetComponent<Camera>();
         }
-        public void MoveCamera(Vector3 inputVector)
+        public void MoveCamera(Vector3 inputVector) // This is called in the GameManager
         {
             var movementVector = Quaternion.Euler(0,30,0) * inputVector;
             gameCamera.transform.position += movementVector * Time.deltaTime * cameraMovementSpeed;

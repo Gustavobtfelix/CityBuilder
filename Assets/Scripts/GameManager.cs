@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
     public InputManager inputManager; // gets Inputmanager script
 
     private void Start() {
-        inputManager.OnMouseClick += HandleMouseClick;
+        inputManager.OnMouseClick += HandleMouseClick; //assign the OnMouseClick a method
     }
 
     private void HandleMouseClick(Vector3Int position){
